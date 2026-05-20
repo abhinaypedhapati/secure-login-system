@@ -27,45 +27,36 @@ A production-ready authentication system with enterprise-grade security features
 | Logout                    | ✅      | Secure session termination          |
 
 
-## 🛠️ Tech Stack & Skills Involved
+**🏆 Skills Demonstrated
+Cybersecurity Skills**
+✅ Authentication & Authorization
+✅ Password Security (bcrypt)
+✅ Brute Force Protection
+✅ SQL Injection Prevention
+✅ Session Management
+✅ Two-Factor Authentication (TOTP)
+✅ Secure Coding Practices
 
-### Backend Technologies
-| Technology | Purpose | Skill Level |
-|------------|---------|-------------|
-| **Python 3.11** | Core programming language | Advanced |
-| **Flask** | Web framework for routing & sessions | Intermediate |
-| **SQLite3** | Lightweight database for user storage | Intermediate |
-| **bcrypt** | Password hashing with salt (12 rounds) | Advanced |
-| **pyotp** | TOTP implementation for 2FA | Intermediate |
-| **qrcode** | QR code generation for 2FA setup | Beginner |
+**Full Stack Development Skills**
+✅ Python Flask Backend
+✅ REST API Design
+✅ SQLite Database Management
+✅ HTML/CSS Frontend
+✅ JavaScript & Fetch API
+✅ Responsive Web Design
 
-### Security Skills Demonstrated
-| Security Concept | Implementation |
-|-----------------|----------------|
-| **Password Hashing** | bcrypt with unique salt per password |
-| **Brute Force Protection** | Rate limiting (5 attempts = 15 min lockout) |
-| **SQL Injection Prevention** | Parameterized queries |
-| **XSS Prevention** | Input sanitization & HTML escaping |
-| **Session Security** | Secure session IDs + tracking |
-| **Two-Factor Authentication** | TOTP (RFC 6238) |
-| **Secure Logout** | Session invalidation |
+**DevOps Skills**
+✅ Git Version Control
+✅ GitHub Repository Management
+✅ Cloud Deployment (Render.com)
+✅ Environment Configuration
 
-### Frontend Skills
-| Technology | Purpose |
-|------------|---------|
-| **HTML5** | Structure of web pages |
-| **CSS3** | Styling & responsive design |
-| **JavaScript** | Client-side validation & API calls |
-| **Fetch API** | Asynchronous backend communication |
-
-### DevOps & Deployment Skills
-| Skill | Description |
-|-------|-------------|
-| **Git** | Version control |
-| **GitHub** | Code hosting & collaboration |
-| **Render.com** | Cloud deployment (free tier) |
-| **Environment Variables** | Secure configuration management |
-
----
-
-
+**📈 Future Enhancements**
+Password reset via email
+OAuth integration (Google, GitHub)
+Biometric authentication
+Hardware security keys (WebAuthn)
+Account activity logging
+Email verification
+Password strength meter
+Remember me feature
