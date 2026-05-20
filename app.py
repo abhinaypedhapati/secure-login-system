@@ -7,6 +7,9 @@ import re
 from datetime import datetime
 from contextlib import contextmanager
 import pyotp
+import segno
+import io
+import base64
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
@@ -376,6 +379,7 @@ def api_revoke_session():
     except Exception as e:
         return jsonify({'success': False})
 
+# ========== REPLACED QR CODE FUNCTION (Using segno - No Pillow needed) ==========
 @app.route('/api/setup-2fa', methods=['GET'])
 def api_setup_2fa():
     try:
@@ -389,16 +393,12 @@ def api_setup_2fa():
         
         # Generate provisioning URI
         totp = pyotp.TOTP(secret)
-        provisioning_uri = totp.provisioning_uri(name=user['username'], issuer_name="SecureLogin")
+        uri = totp.provisioning_uri(name=user['username'], issuer_name="SecureLogin")
         
-        # Generate QR code
-        qr = qrcode.QRCode(version=1, box_size=10, border=5)
-        qr.add_data(provisioning_uri)
-        qr.make(fit=True)
-        
-        img = qr.make_image(fill_color="black", back_color="white")
+        # Generate QR code using segno (no Pillow needed!)
+        qr = segno.make(uri)
         buffered = io.BytesIO()
-        img.save(buffered, format="PNG")
+        qr.save(buffered, kind='png', scale=5)
         qr_base64 = base64.b64encode(buffered.getvalue()).decode()
         
         session['temp_2fa_secret'] = secret
@@ -409,7 +409,7 @@ def api_setup_2fa():
         })
     except Exception as e:
         print(f"Error in setup-2fa: {e}")
-        return jsonify({'secret': 'ABCDEFGHIJKLMNOP', 'qr_code': ''})
+        return jsonify({'secret': 'ERROR', 'qr_code': ''})
 
 @app.route('/api/setup-2fa', methods=['POST'])
 def api_setup_2fa_enable():
