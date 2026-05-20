@@ -7,9 +7,6 @@ import re
 from datetime import datetime
 from contextlib import contextmanager
 import pyotp
-import qrcode
-import io
-import base64
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
