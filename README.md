@@ -4,6 +4,13 @@ A production-ready authentication system with enterprise-grade security features
 
 ---
 
+## 🌐 Live Demo
+
+**[Click Here to View Live Demo](https://secure-login-system.onrender.com)**
+
+
+---
+
 ## 📌 Quick Overview
 
 | Feature                   | Status | Description                         |
@@ -19,5 +26,46 @@ A production-ready authentication system with enterprise-grade security features
 | Input Validation          | ✅      | Prevent XSS and injection attacks   |
 | Logout                    | ✅      | Secure session termination          |
 
+
+## 🛠️ Tech Stack & Skills Involved
+
+### Backend Technologies
+| Technology | Purpose | Skill Level |
+|------------|---------|-------------|
+| **Python 3.11** | Core programming language | Advanced |
+| **Flask** | Web framework for routing & sessions | Intermediate |
+| **SQLite3** | Lightweight database for user storage | Intermediate |
+| **bcrypt** | Password hashing with salt (12 rounds) | Advanced |
+| **pyotp** | TOTP implementation for 2FA | Intermediate |
+| **qrcode** | QR code generation for 2FA setup | Beginner |
+
+### Security Skills Demonstrated
+| Security Concept | Implementation |
+|-----------------|----------------|
+| **Password Hashing** | bcrypt with unique salt per password |
+| **Brute Force Protection** | Rate limiting (5 attempts = 15 min lockout) |
+| **SQL Injection Prevention** | Parameterized queries |
+| **XSS Prevention** | Input sanitization & HTML escaping |
+| **Session Security** | Secure session IDs + tracking |
+| **Two-Factor Authentication** | TOTP (RFC 6238) |
+| **Secure Logout** | Session invalidation |
+
+### Frontend Skills
+| Technology | Purpose |
+|------------|---------|
+| **HTML5** | Structure of web pages |
+| **CSS3** | Styling & responsive design |
+| **JavaScript** | Client-side validation & API calls |
+| **Fetch API** | Asynchronous backend communication |
+
+### DevOps & Deployment Skills
+| Skill | Description |
+|-------|-------------|
+| **Git** | Version control |
+| **GitHub** | Code hosting & collaboration |
+| **Render.com** | Cloud deployment (free tier) |
+| **Environment Variables** | Secure configuration management |
+
+---
 
 
