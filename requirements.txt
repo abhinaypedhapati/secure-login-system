@@ -1,0 +1,7 @@
+flask==2.3.3
+flask-login==0.6.2
+bcrypt==4.1.0
+pyotp==2.9.0
+qrcode==7.4.2
+Pillow==10.1.0
+werkzeug==2.3.0
